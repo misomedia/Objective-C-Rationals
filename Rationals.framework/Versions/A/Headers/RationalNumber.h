@@ -59,6 +59,9 @@
 */
 +(RationalNumber*)numberWithUnderlyingNumber:(RATIONAL_NUMBER)n;
 
+//!	Convenience method for constructing a RationalNumber instance from a string representation of a rational number.
++(RationalNumber*)numberWithString:(NSString*)string;
+
 //!	Compares two RationalNumber instances.
 /*!
 	\param	LHS	the RationalNumber on the left.
@@ -109,6 +112,18 @@
 	\return one (as an unsigned int).
 */
 +(RationalNumber*)one;
+
+//! Positive infinity as a convenience method.
+/*!
+    \return pos_inf (as a signed infinity).
+*/
++(RationalNumber*)positiveInfinity;
+
+//! Negative infinity as a convenience method.
+/*!
+ \return neg_inf (as a signed infinity).
+ */
++(RationalNumber*)negativeInfinity;
 
 //!	Computes the product of a list of RationalNumber factors.
 /*!

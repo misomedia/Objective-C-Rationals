@@ -43,6 +43,8 @@ enum _RATIONAL_NUMBER_TYPE
 	RATIONAL_NUMBER_TYPE_DOUBLE,										/*!<	Tag for the double type.	*/
 	RATIONAL_NUMBER_TYPE_SINGLE_PRECISION_NUM_DEN_RATIONAL,				/*!<	Tag for the SINGLE_PRECISION_NUM_DEN_RATIONAL type.	*/
 	RATIONAL_NUMBER_TYPE_SINGLE_PRECISION_INT_FRACNUM_FRACDEN_RATIONAL,	/*!<	Tag for the SINGLE_PRECISION_INT_FRACNUM_FRACDEN_RATIONAL type.	*/
+    RATIONAL_NUMBER_TYPE_SIGNED_INFINITY,								/*!<	Tag for the SIGNED_INFINITY type.	*/
+    RATIONAL_NUMBER_TYPE_NAN,                                           /*!<	Tag for the NAN type.	*/
 };
 
 typedef enum _RATIONAL_NUMBER_TYPE RATIONAL_NUMBER_TYPE;	/*!<	An alias for the enumeration _RATIONAL_NUMBER_TYPE	*/
@@ -87,6 +89,10 @@ RATIONAL_NUMBER make_RATIONAL_NUMBER_from_SINGLE_PRECISION_NUM_DEN_RATIONAL(int 
 	\param	frac_den	an unsigned integer argument for the denominator of the fraction.
 */
 RATIONAL_NUMBER make_RATIONAL_NUMBER_from_SINGLE_PRECISION_INT_FRACNUM_FRACDEN_RATIONAL(int int_n, uint frac_num, uint frac_den);
+
+//!	Constructor for the RATIONAL_NUMBER type using a signed infinity.
+/*!	\param	is_positive	a boolean argument.	*/
+RATIONAL_NUMBER make_RATIONAL_NUMBER_from_SIGNED_INFINITY(bool is_positive);
 
 //!	Copy constructor for the RATIONAL_NUMBER type.
 /*!	\param	N	a RATIONAL_NUMBER argument.	*/
@@ -167,5 +173,7 @@ RATIONAL_NUMBER RATIONAL_NUMBER_product(RATIONAL_NUMBER LHS, RATIONAL_NUMBER RHS
 RATIONAL_NUMBER RATIONAL_NUMBER_reciprocate(RATIONAL_NUMBER N);
 
 NSString* StringFor_RATIONAL_NUMBER(RATIONAL_NUMBER N);
+
+RATIONAL_NUMBER RATIONAL_NUMBER_forString(NSString* s);
 
 #endif
