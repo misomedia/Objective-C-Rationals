@@ -12,8 +12,6 @@
 
 +(RationalNumber*)importRationalNumberFromJSON:(id)json;
 
--(id)initFromJSON:(id)json;
-
 -(id)exportToJSON;
 
 @end
