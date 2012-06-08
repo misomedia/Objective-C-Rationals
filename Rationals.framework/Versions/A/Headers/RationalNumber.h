@@ -107,6 +107,20 @@
 */
 +(RationalNumber*)sum:(NSArray*)summands;
 
+//!	Computes the maximum of a list of RationalNumber instances.
+/*!
+	\param	numbers	an NSArray instance containing RationalNumber instances.
+	\return	the greatest of the RationalNumber instances (if more than one number in the input is the maximum, one is chosen arbitrarily.  If input is empty, -\infty is returned).
+*/
++(RationalNumber*)maximum:(NSArray*)numbers;
+
+//!	Computes the minimum of a list of RationalNumber instances.
+/*!
+	\param	numbers	an NSArray instance containing RationalNumber instances.
+	\return	the least of the RationalNumber instances (if more than one number in the input is the minimum, one is chosen arbitrarily.  If input is empty, \infty is returned).
+*/
++(RationalNumber*)minimum:(NSArray*)numbers;
+
 //!	One as a convenience method.
 /*!
 	\return one (as an unsigned int).
