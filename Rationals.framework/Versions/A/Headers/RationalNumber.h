@@ -12,7 +12,7 @@
 #pragma mark OBJ_C_BOX
 
 //!	An Objective-C wrapper for the RATIONAL_NUMBER type.
-@interface RationalNumber : NSObject// <JSONObjCProtocol>
+@interface RationalNumber : NSObject	<NSCopying>
 {
 	RATIONAL_NUMBER underlying_number;	/*!<	The RATIONAL_NUMBER.	*/
 }
