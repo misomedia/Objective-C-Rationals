@@ -212,3 +212,13 @@
 -(NSString*)stringValue;
 
 @end
+
+@interface RationalNumber (JSONCodec)
+
++(RationalNumber*)importFromJSON:(id)json;
+
++(RationalNumber*)importRationalNumberFromJSON:(id)json;
+
+-(id)exportToJSON;
+
+@end
